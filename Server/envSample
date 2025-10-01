@@ -1,0 +1,7 @@
+dbconnect=your_dbconnection_string
+
+adminEmail=Enter admin email
+adminPassword=Enter admin password
+
+
+JWT_KEY=Enter the SecretKey
