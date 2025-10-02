@@ -22,7 +22,7 @@ export default function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post("http://localhost:5000/api/user/login",
+            const res = await axios.post(`${import.meta.env.VITE_HOST_URL}/api/user/login`,
                 formData
             )
 

@@ -13,7 +13,7 @@ export default function AdminViewUsersFeedback() {
 
     const fetchFeedbacks = async () => {
         try {
-            const response = await axios.get('http://localhost:5000/api/admin/adminviewfeedback',
+            const response = await axios.get(`${import.meta.env.VITE_HOST_URL}/api/admin/adminviewfeedback`,
                 {
                     headers: { token }
                 }

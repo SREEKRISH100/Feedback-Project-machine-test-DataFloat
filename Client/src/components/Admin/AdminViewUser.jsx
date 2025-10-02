@@ -9,7 +9,7 @@ const token=localStorage.getItem("token")
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/admin/adminviewuser',
+        const res = await axios.get(`${import.meta.env.VITE_HOST_URL}/api/admin/adminviewuser`,
           {
                     headers:{token}
                 }

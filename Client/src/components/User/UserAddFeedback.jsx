@@ -25,7 +25,7 @@ export default function UserAddFeedback() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/user/addFeeback',
+            const res = await axios.post(`${import.meta.env.VITE_HOST_URL}/api/user/addFeeback`,
                 formData,
                 {
                     headers: {
@@ -71,15 +71,7 @@ export default function UserAddFeedback() {
                                 </div>
                             </div>
 
-                            {/* <label className='block text-xl font-semibold'>ADD COMMENT</label>
-                            <input
-                                type="text"
-                                className='mb-4 border w-full rounded-sm py-2 px-4 focus:outline-none focus:ring-2 focus:ring-white'
-                                name='comments'
-                                placeholder='Enter your comment'
-                                onChange={handleChange}
-                                required
-                            /> */}
+                           
                             <label className='block text-xl font-semibold'>ADD COMMENT</label>
                             <textarea
                                 className='mb-4 border w-full rounded-sm py-2 px-4 focus:outline-none focus:ring-2 focus:ring-white'
@@ -87,7 +79,7 @@ export default function UserAddFeedback() {
                                 placeholder='Enter your comment'
                                 onChange={handleChange}
                                 required
-                                rows={4} // You can adjust the number of visible rows
+                                rows={4} 
                             />
 
                             <button

@@ -15,7 +15,7 @@ export default function UserViewTaskFeedback() {
 
     const fetchTask = async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/user/viewFeeback',
+            const res = await axios.get(`${import.meta.env.VITE_HOST_URL}/api/user/viewFeeback`,
                 {
                     headers: {
                         token,
@@ -44,7 +44,7 @@ export default function UserViewTaskFeedback() {
     const handleDelete = async (id) => {
         // alert(`deleted : ${id}`);
         try {
-            const res = await axios.delete(`http://localhost:5000/api/user/deleteFeeback/${id}`,
+            const res = await axios.delete(`${import.meta.env.VITE_HOST_URL}/api/user/deleteFeeback/${id}`,
                 {
                     headers:{
                         token,
