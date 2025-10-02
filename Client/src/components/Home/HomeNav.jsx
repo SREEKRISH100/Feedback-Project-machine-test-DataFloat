@@ -6,7 +6,7 @@ export default function HomeNav() {
         <div>
             <nav className='w-full bg-gray-800 p-4 flex justify-between items-center sticky top-0 z-10'>
                 <Link to={'/'} className='text-white text-xl font-semibold hover:text-amber-400 py-2 px-5 rounded'>
-                DATAFLOW    FEEDBACK FORM 
+                DATAFLOAT   FEEDBACK FORM 
                 
                 </Link>
                 <div className='flex gap-0.5'>
