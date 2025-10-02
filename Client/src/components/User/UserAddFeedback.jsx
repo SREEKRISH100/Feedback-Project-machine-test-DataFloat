@@ -8,8 +8,8 @@ import { FaStar } from 'react-icons/fa';
 export default function UserAddFeedback() {
 
     const [formData, setFormData] = useState({
-        comments:'',
-        rating:''
+        comments: '',
+        rating: ''
     });
 
     const token = localStorage.getItem('token');
@@ -36,11 +36,10 @@ export default function UserAddFeedback() {
                 toast.success(res.data.msg || 'FeedBack Added')
             }
         } catch (error) {
-             if(error.response?.data?.tokenStatus==="failed")
-                        {
-                        localStorage.removeItem('token')
-                            navigate('/login')
-                        }
+            if (error.response?.data?.tokenStatus === "failed") {
+                localStorage.removeItem('token')
+                navigate('/login')
+            }
             toast.error(error.response?.data?.msg || 'Feedba Failed to Add');
             console.error('Feedback Add Failed:', error);
         }
@@ -72,7 +71,7 @@ export default function UserAddFeedback() {
                                 </div>
                             </div>
 
-                            <label className='block text-xl font-semibold'>ADD COMMENT</label>
+                            {/* <label className='block text-xl font-semibold'>ADD COMMENT</label>
                             <input
                                 type="text"
                                 className='mb-4 border w-full rounded-sm py-2 px-4 focus:outline-none focus:ring-2 focus:ring-white'
@@ -80,6 +79,15 @@ export default function UserAddFeedback() {
                                 placeholder='Enter your comment'
                                 onChange={handleChange}
                                 required
+                            /> */}
+                            <label className='block text-xl font-semibold'>ADD COMMENT</label>
+                            <textarea
+                                className='mb-4 border w-full rounded-sm py-2 px-4 focus:outline-none focus:ring-2 focus:ring-white'
+                                name='comments'
+                                placeholder='Enter your comment'
+                                onChange={handleChange}
+                                required
+                                rows={4} // You can adjust the number of visible rows
                             />
 
                             <button
